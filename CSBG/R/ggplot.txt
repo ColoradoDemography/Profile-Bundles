@@ -1,0 +1,20 @@
+cp_poptrend.R:#' @param base is the base text size for the ggplot2 object and codemog_theme()
+cp_poptrend.R:require(ggplot2, quietly = TRUE)
+cp_poptrend.R:  ggplot(aes(x=year, y=value, fill=variable))+
+cp_poptrend.R:  ggplot()+
+graph_objects.R:#' Colorado State Demography Office ggplot2 Theme
+graph_objects.R:#' Custom \code{ggplot2} theme that borrows heavily from the
+graph_objects.R:#' Colorado State Demography Office Color Palette for ggplot2
+outputWord.R:    ggimg1 <- age_data2 %>% ggplot(aes(x=age_cat, y=age_pct)) +
+outputWord.R:    # Creating ggplot
+outputWord.R:       ggimg2a <-ggplot(ageemp_data2, aes(x=date, y=UNEMPRATE)) +
+outputWord.R:       ggimg3 <-ggplot(pov_data2, aes(x=POV.LEVEL, y=pct)) +
+outputWord.R:       ggimg4 <-ggplot(educatt_data2, aes(x=educatt, y=value, fill=lvl)) +
+outputWord.R:       ggimg5 <-ggplot(povage_data2, aes(x=age_cat, y=value)) +
+outputWord.R:       ggimg6 <-ggplot(povagetr_data2, aes(x=year, y=value, group= age_cat, color=age_cat)) +
+outputWord.R:       ggimg7 <-ggplot(povagedis_data2, aes(x=age_cat, y=pct)) +
+outputWord.R:      ggimg8 <-ggplot(hhpov_data2, aes(x=famtype, y=pct, fill=kids)) +
+outputWord.R:      ggimg9 <-ggplot(tenure_data2, aes(x=famtype, y=pct, fill=tenure)) +
+outputWord.R:     ggimg10 <-ggplot(snap_data2, aes(x=SNAP, y=pct)) +
+outputWord.R:     ggimg11 <-ggplot(wic_data2, aes(x=WIC, y=pct)) +
+outputWord.R:     ggimg12 <-ggplot(insurance_data2, aes(x=AGE, y=PCT, group=POV, fill=POV)) +

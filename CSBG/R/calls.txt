@@ -1,0 +1,27 @@
+agePlotPRO2.R:  f.AgeUS <- get_acs(geography = 'us', table="B01001", 
+agePlotPRO2.R:  f.AgeST <- get_acs(geography = 'state', table="B01001", state="CO",
+agePlotPRO2.R:  f.AgeCTY <- get_acs(geography = 'county', table="B01001", state="CO",
+agePlotPRO2_tab.R:  f.AgeUS <- get_acs(geography = 'us', table="B01001", 
+agePlotPRO2_tab.R:  f.AgeST <- get_acs(geography = 'state', table="B01001", state="CO",
+agePlotPRO2_tab.R:  f.AgeCTY <- get_acs(geography = 'county', table="B01001", state="CO",
+snap.R:  f.SNAPctyVAL <- get_acs(geography = "county", table="S2201", state = "CO", year = curYr,
+codemog_api=function(datacall="table",data, db="c2010", geonum="108", sumlev=NULL, state="08", type="csv", meta="yes", geography="geonum"){
+RTHouse.R:  f.b25033 <- codemog_api(data="b25033", db=ACS, geonum=paste0("1", state, ctyfips),meta="no") # Population by housing type
+RTHouse.R:  f.b25032 <- codemog_api(data="b25032", db=ACS, geonum=paste0("1", state, ctyfips),meta="no") # Units in Structure
+RTHouse.R:  f.b25037 <- codemog_api(data="b25037", db=ACS, geonum=paste0("1", state, ctyfips),meta="no") # Year Built
+RTHouse.R:  f.b25010 <- codemog_api(data="b25010", db=ACS, geonum=paste0("1", state, ctyfips),meta="no") # Persons per Household
+RTHouse.R:  f.b25033 <- codemog_api(data="b25033", db=ACS, geonum=paste0("1", state, placefips),meta="no") # Population by housing type
+RTHouse.R:  f.b25032 <- codemog_api(data="b25032", db=ACS, geonum=paste0("1", state, placefips),meta="no") # Units in Structure
+RTHouse.R:  f.b25037 <- codemog_api(data="b25037", db=ACS, geonum=paste0("1", state, placefips),meta="no") # Year Built
+RTHouse.R:  f.b25010 <- codemog_api(data="b25010", db=ACS, geonum=paste0("1", state, placefips),meta="no") # Persons per Household
+ageEmployment.R:   f.ctyEMP <- codemog_api(data="b23001",db=ACS,sumlev="50",geography="sumlev",meta="no")
+agePlotPRO.R:  f.ctyAge <- codemog_api(data="b01001",db=ACS,sumlev="50",geography="sumlev",meta="no")
+agePoverty.R:      tempDF <- codemog_api(data="b23001",db=ACS,geonum=paste("1",state , ctyfips[i],sep=""),meta="no")
+disabilityPRO.R:  f.ctyDIS <- codemog_api(data="c18130",db=ACS,sumlev="50",geography="sumlev",meta="no")
+disabilityT7.R:  f.ctyDIS <- codemog_api(data="c18130",db=ACS,sumlev="50",geography="sumlev",meta="no")
+educPRO.R: f.educcty <- codemog_api(data="b17003",db=ACS,sumlev="50",geography="sumlev",meta="no")
+familiesPRO.R:  f.ctyFAM <- codemog_api(data="b17010",db=ACS,sumlev="50",geography="sumlev",meta="no")
+familiesT8.R:  f.ctyFAM <- codemog_api(data="b17010",db=ACS,sumlev="50",geography="sumlev",meta="no")
+housingPRO.R:  f.ctyHH <- codemog_api(data="b17019",db=ACS,sumlev="50",geography="sumlev",meta="no")
+mattest.R:  f.ctyAge <- codemog_api(data="b01001",db=ACS,sumlev="50",geography="sumlev",meta="no")
+povertyPRO.R: f.povertycty <- codemog_api(data="b17024",db=ACS,sumlev="50",geography="sumlev",meta="no")
