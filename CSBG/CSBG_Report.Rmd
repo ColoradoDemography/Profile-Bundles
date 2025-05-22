@@ -1,0 +1,156 @@
+---
+title: "CSBG Agency Report"
+output:
+  word_document:
+    reference_docx: word_template.docx
+date: "Vintage 2023"
+
+fontsize: 11pt
+editor: visual
+
+
+params:
+    entity: entity
+    rpt_title: rpt_title
+    curYr : curYr
+    fileLoc : fileLoc
+---
+
+```{r}
+#| echo: false
+#| include: false
+#| warning: false
+#| message: false
+library(tidyverse)
+library(knitr)
+library(accessr)
+outputDir <- paste0(params$entity)
+
+logo_str <- "./www/co_dola_off_sd_rgb_email.png"
+logo_alt <- "State Demography Office Logo"
+
+acsYr <- paste0(params$curYr - 4,"-",params$curYr)
+
+
+
+```
+
+```{r, fig.alt = logo_alt, echo = FALSE, out.width="50%", results='asis'}
+knitr::include_graphics(logo_str)
+```
+
+The charts in this document compares *`r params$entity`* CSBG agency to National and State statistics from the
+
+-   Vintage `r params$curYr` State Demography Office Population Estimates,
+-   Unemployment data from the Bureau of Labor Statistics, and
+-   The `r acsYr` American Community Survey 5-Year Data.
+
+Data tables are available in the *`r params$entity` Data Tables* spreadsheet in the entity folder.
+
+## County Map
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[1,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[1,1])
+```
+
+## Contents of the `r params$entity` folder
+
+Data tables are available in the *`r params$entity` Data Tables* spreadsheet in the agency folder.
+
+County-level charts are available in the sub-folders.
+
+-   Contents of Sub folders
+    -   *Age Distribution*: Age Pyramids by Sex
+    -   *Unemployment Trend*: Two Year Unemployment Rate Trend Line
+    -   *Poverty Levels*: Individuals by Household Income as a Percentage of the Federal Poverty Level
+    -   *Education By Poverty*: Educational Attainment by Poverty Status, Age 25 and Older
+    -   *Age by Poverty*: Age by Poverty Status
+    -   *Disability by Poverty*: Disability Status by Age and Poverty Status
+    -   *Families by Poverty*: Family Composition by Poverty Status
+    -   *Housing Tenure by Poverty*: Housing Tenure by Family Composition and Poverty Status
+    -   *SNAP Program by Poverty*: SNAP Program Participation by Poverty Status
+    -   *Health Insurance by Poverty*: Health Insurance by Poverty Status
+
+## Age Distribution
+
+### United States
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[2,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[2,1])
+```
+
+### Colorado
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[3,2],out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[3,1])
+```
+
+\newpage
+
+### `r params$entity`
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[4,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[4,1])
+```
+
+## Unemployment Rate
+
+```{r echo = FALSE, fig.alt=params$fileLoc[5,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[5,1])
+```
+
+\newpage
+
+## Poverty Levels
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[6,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[6,1])
+```
+
+## Educational Attainment by Poverty Status, Population Age 25 and Older
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[7,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[7,1])
+```
+
+\newpage
+
+## Age by Poverty Status
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[8,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[8,1])
+```
+
+## Disability Status by Age and Poverty Status
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[9,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[9,1])
+```
+
+\newpage
+
+## Family Composition by Poverty Status
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[10,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[10,1])
+```
+
+## Housing Tenure by Family Composition and Poverty Status
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[11,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[11,1])
+```
+
+\newpage
+
+## SNAP Program Participation by Poverty Status
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[12,2],out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[12,1])
+```
+
+## Health Insurance by Poverty Status
+
+```{r, echo = FALSE, fig.alt=params$fileLoc[13,2], out.widh="70%", results='asis'}
+knitr::include_graphics(params$fileLoc[13,1])
+```
